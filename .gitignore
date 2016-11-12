@@ -63,3 +63,5 @@ instance/
 awtc/
 venv/
 ENV/
+.DS_Store
+app.db

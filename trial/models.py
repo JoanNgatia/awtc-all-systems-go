@@ -1,6 +1,6 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from manage import db
+from main.manage import db
 
 
 class User(db.Model):
@@ -18,7 +18,3 @@ class User(db.Model):
     def verify_password(self, password):
         """Verify the password entered as the user's returns True if it is."""
         return check_password_hash(self.password, password)
-
-
-if __name__ == "__main__":
-    db.create_all()
