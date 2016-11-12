@@ -44,7 +44,7 @@ class AWTCTestCase(TestCase):
         number_users = User.query.all()
         # self.assertIn('User {} has been successfully registered'.
         #               format(username), response.data)
-        self.assertEqual(len(number_users), 2)
+        self.assertEqual(len(number_users), 1)
         self.assertEqual(response.status_code, 400)
 
     def tearDown(self):
