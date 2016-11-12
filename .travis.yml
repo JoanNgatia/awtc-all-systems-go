@@ -1,0 +1,16 @@
+language: python
+python:
+  - "2.7"
+before_install:
+  - "pip install -r requirements.txt"
+before_script:
+  - export PYTHONPATH=.
+  - python run.py db
+script:
+  - nosetests
+branches:
+  only:
+  - develop
+  - master
+services:
+  - sqlite
